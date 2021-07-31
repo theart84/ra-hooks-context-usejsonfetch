@@ -27,7 +27,7 @@ export const useFetchJson = (url, options) => {
       }
     }
     sendRequest();
-  }, [])
+  }, [options.method, options.headers, options.body, url])
 
   return [data, loading, error]
 }
